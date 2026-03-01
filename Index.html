@@ -1,291 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Ciudad Primavera – Stage Manager</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-:root{
-  --bg-gradient: linear-gradient(180deg,#b7b6c8 0%, #f2a365 55%, #f29b4a 100%);
-  --white:#ffffff;
-  --yellow:#ffe066;
-  --orange:#ff9800;
-  --orange-dark:#f57c00;
-}
-
-*{
-  box-sizing:border-box;
-  font-family:"Arial Rounded MT Bold","Helvetica Rounded",system-ui,sans-serif;
-}
-
-body{
-  margin:0;
-  padding:50px 20px 90px;
-  background:var(--bg-gradient);
-  color:var(--white);
-}
-
-/* ===== HEADER ===== */
-h1{
-  text-align:center;
-  font-size:46px;
-  letter-spacing:3px;
-  margin-bottom:8px;
-}
-
-.subtitle{
-  text-align:center;
-  font-size:18px;
-  letter-spacing:2px;
-}
-
-.subline{
-  text-align:center;
-  font-size:14px;
-  letter-spacing:1.5px;
-  opacity:.9;
-  margin:10px 0 60px;
-}
-
-/* ===== CALENDAR ===== */
-.calendar{
-  max-width:1300px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
-
-.event{
-  background:rgba(255,255,255,.15);
-  backdrop-filter: blur(6px);
-  border-radius:22px;
-  padding:22px;
-  text-align:center;
-}
-
-.city{
-  font-size:20px;
-  margin-bottom:6px;
-}
-
-.date{
-  font-size:36px;
-  font-weight:900;
-  color:var(--yellow);
-}
-
-.month{
-  font-size:14px;
-  letter-spacing:1px;
-}
-
-.venue{
-  font-size:13px;
-  opacity:.95;
-  margin-top:6px;
-}
-
-.flight{
-  margin-top:16px;
-}
-
-.flight a{
-  display:inline-block;
-  padding:10px 20px;
-  background:var(--orange);
-  color:#fff;
-  text-decoration:none;
-  font-size:12px;
-  letter-spacing:1px;
-  border-radius:22px;
-  transition:.3s;
-}
-
-.flight a:hover{
-  background:var(--orange-dark);
-}
-
-/* ===== TASKS ===== */
-h2{
-  text-align:center;
-  margin:90px 0 25px;
-  letter-spacing:2px;
-}
-
-.tasks{
-  max-width:980px;
-  margin:0 auto;
-  background:rgba(255,255,255,.18);
-  border-radius:28px;
-  padding:36px 32px;
-}
-
-.task{
-  display:flex;
-  gap:14px;
-  padding:14px 0;
-  border-bottom:1px dashed rgba(255,255,255,.35);
-}
-
-.task:last-child{
-  border-bottom:none;
-}
-
-.task input{
-  accent-color:var(--yellow);
-  transform:scale(1.3);
-  margin-top:4px;
-}
-
-.task label{
-  cursor:pointer;
-  font-size:15px;
-  line-height:1.35;
-}
-
-.task span{
-  display:block;
-  font-size:13px;
-  opacity:.9;
-  margin-top:4px;
-}
-
-/* ===== FOOTER ===== */
-.note{
-  text-align:center;
-  margin-top:40px;
-  font-size:12px;
-  letter-spacing:1px;
-  opacity:.85;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kornig Agency | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="cursor-light" id="cursorLight"></div>
+  <div class="film-grain"></div>
 
-<h1>CIUDAD PRIMAVERA</h1>
-<div class="subtitle">GIRA DE ESTADIOS</div>
-<div class="subline">Stage Manager Show – Juan Gomez “Juanchito”</div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">KORNIG AGENCY</a>
+      <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="roster.html">Roster</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="calendar">
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Techno Worldwide Booking Agency</p>
+      <h1>BOOKING, CURATORÍA Y DIRECCIÓN ARTÍSTICA PARA LA ESCENA TECHNO GLOBAL.</h1>
+      <p class="lead">Conectamos artistas de vanguardia con clubs, festivales y promotores de todo el mundo, manteniendo una línea sonora hipnótica, intensa y de alto impacto.</p>
+      <a class="button" href="roster.html">Explorar roster</a>
+    </section>
 
-  <!-- ENERO -->
-  <div class="event">
-    <div class="city">Puerto Gaitán, Colombia</div>
-    <div class="date">11</div>
-    <div class="month">ENERO 2026</div>
-    <div class="venue">Tarima Río</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+    <section class="feature container" id="darkduction-presskit">
+      <h2>DARKDUCTION</h2>
+      <div class="subtitle">Medellín, Colombia — DJ / Live / Multichannel</div>
+      <div class="banner"></div>
 
-  <!-- MARZO -->
-  <div class="event">
-    <div class="city">Cali, Colombia</div>
-    <div class="date">21</div>
-    <div class="month">MARZO 2026</div>
-    <div class="venue">Estadio Pascual Guerrero</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="bio">Bio</button>
+        <button class="tab-btn" data-tab="events">Events</button>
+        <button class="tab-btn" data-tab="press">Press Photos</button>
+        <button class="tab-btn" data-tab="sets">Sets</button>
+        <button class="tab-btn" data-tab="projects">Projects</button>
+      </div>
 
-  <div class="event">
-    <div class="city">Pereira, Colombia</div>
-    <div class="date">28</div>
-    <div class="month">MARZO 2026</div>
-    <div class="venue">Hernán Ramírez Villegas</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+      <div id="bio" class="tab-content active">
+        <p>Darkduction es un artista colombiano activo desde 2014. Su sonido combina techno hipnótico, texturas industriales y estructuras para sistemas de alto voltaje.</p>
+        <a href="mailto:bookings@kornigagency.com" class="button">Booking</a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Soundcloud"><i class="fab fa-soundcloud"></i></a>
+          <a href="#" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="RA"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
 
-  <!-- ABRIL -->
-  <div class="event">
-    <div class="city">Cúcuta, Colombia</div>
-    <div class="date">11</div>
-    <div class="month">ABRIL 2026</div>
-    <div class="venue">General Santander</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+      <div id="events" class="tab-content">
+        <div class="grid">
+          <div class="card" data-img="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80" alt="Evento 1"></div>
+          <div class="card" data-img="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80" alt="Evento 2"></div>
+        </div>
+      </div>
 
-  <div class="event">
-    <div class="city">Bucaramanga, Colombia</div>
-    <div class="date">18</div>
-    <div class="month">ABRIL 2026</div>
-    <div class="venue">Américo Montanini</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+      <div id="press" class="tab-content">
+        <div class="grid">
+          <div class="card" data-img="https://images.unsplash.com/photo-1516222338250-863216ce01ea?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1516222338250-863216ce01ea?auto=format&fit=crop&w=1200&q=80" alt="Press 1"></div>
+          <div class="card" data-img="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80" alt="Press 2"></div>
+        </div>
+      </div>
 
-  <!-- MAYO COLOMBIA -->
-  <div class="event">
-    <div class="city">Barranquilla, Colombia</div>
-    <div class="date">01</div>
-    <div class="month">MAYO 2026</div>
-    <div class="venue">Romelio Martínez</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+      <div id="sets" class="tab-content">
+        <iframe width="100%" height="166" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/berghain_official" loading="lazy"></iframe>
+      </div>
 
-  <div class="event">
-    <div class="city">Cartagena, Colombia</div>
-    <div class="date">09</div>
-    <div class="month">MAYO 2026</div>
-    <div class="venue">Jaime Morón</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+      <div id="projects" class="tab-content">
+        <p>Kornig Lab: plataforma de showcases inmersivos para clubs underground y festivales boutique en Europa, América y Asia.</p>
+      </div>
+    </section>
+  </main>
 
-  <!-- MÉXICO -->
-  <div class="event">
-    <div class="city">Mexico City, Mexico</div>
-    <div class="date">14</div>
-    <div class="month">MAYO 2026</div>
-    <div class="venue">Palacio de los Deportes</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
+  <div class="lightbox" id="lightbox"><img id="lightbox-img" alt="Preview"></div>
 
-  <div class="event">
-    <div class="city">Mexico City, Mexico</div>
-    <div class="date">15</div>
-    <div class="month">MAYO 2026</div>
-    <div class="venue">Palacio de los Deportes</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
-
-  <div class="event">
-    <div class="city">Tres Potrillos, Mexico</div>
-    <div class="date">17</div>
-    <div class="month">MAYO 2026</div>
-    <div class="venue">Arena VFG</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
-
-  <div class="event">
-    <div class="city">Monterrey, Mexico</div>
-    <div class="date">20</div>
-    <div class="month">MAYO 2026</div>
-    <div class="venue">Arena Monterrey</div>
-    <div class="flight"><a href="#">VER VUELOS</a></div>
-  </div>
-
-</div>
-
-<h2>STAGE MANAGER – TASK LIST</h2>
-
-<div class="tasks">
-
-  <div class="task"><input type="checkbox"><label>Coordinación general del show<span>Ejecución, tiempos y narrativa</span></label></div>
-  <div class="task"><input type="checkbox"><label>Bailarines<span>Entradas, salidas y posiciones</span></label></div>
-  <div class="task"><input type="checkbox"><label>Vestuario artista<span>Cambios y asistentes</span></label></div>
-  <div class="task"><input type="checkbox"><label>Invitados<span>Accesos y seguridad</span></label></div>
-  <div class="task"><input type="checkbox"><label>FX<span>Luces, CO₂, pirotecnia</span></label></div>
-  <div class="task"><input type="checkbox"><label>Audio FOH / Monitores<span>Mics, playback</span></label></div>
-  <div class="task"><input type="checkbox"><label>Iluminación<span>Snapshots y golpes</span></label></div>
-  <div class="task"><input type="checkbox"><label>Visuales<span>Contenido correcto</span></label></div>
-  <div class="task"><input type="checkbox"><label>Intercom<span>Comunicación total</span></label></div>
-  <div class="task"><input type="checkbox"><label>Contingencias<span>Plan B inmediato</span></label></div>
-
-</div>
-
-<div class="note">
-  Tour Production · Stage Direction · Ciudad Primavera
-</div>
-
+  <footer class="container footer">© Kornig Agency — Techno Worldwide</footer>
+  <script src="script.js"></script>
 </body>
 </html>
